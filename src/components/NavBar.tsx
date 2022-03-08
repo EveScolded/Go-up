@@ -1,52 +1,36 @@
 import { Button } from "@mui/material";
-import React from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./NavBar.module.scss";
 import logo from "../assets/mountain.svg";
+import NavLinks from "./NavLinks";
+import MobileMenu from "./MobileMenu";
 
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onOpenMenu = () => {
+    setIsOpen((isMobile) => !isMobile);
+  };
   return (
     <header className={classes.header}>
       <div className={classes.logoContainer}>
         <img className={classes.logo} src={logo} />
         <h1>Go up!</h1>
       </div>
-      <nav>
-        <ul className={classes.navigation}>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? `${classes.active}` : `${classes.inactive}`
-              }
-              to="/"
-            >
-              Home
-            </NavLink>
-          </li>
 
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? `${classes.active}` : `${classes.inactive}`
-              }
-              to="/mountains"
-            >
-              Mountains
-            </NavLink>
-          </li>
+      <NavLinks className={classes.menuDesktop} />
+      <Button
+        className={classes.menu}
+        variant="contained"
+        color="primary"
+        onClick={onOpenMenu}
+      >
+        <MenuIcon />
+      </Button>
+      {isOpen && <MobileMenu />}
 
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? `${classes.active}` : `${classes.inactive}`
-              }
-              to="/rocks"
-            >
-              Rocks
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
       <Button variant="contained" color="primary">
         Log in
       </Button>

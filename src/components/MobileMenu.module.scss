@@ -1,0 +1,13 @@
+.menuContainer {
+  position: absolute;
+  top: 80px;
+  width: 200px;
+  height: 500px;
+  background-color: black;
+
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+}

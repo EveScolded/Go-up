@@ -4,33 +4,52 @@
   background-image: url("../assets/mainCover.jpg");
   background-size: cover;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 4fr 1fr 1fr 1fr 1fr;
   color: colors.$text-light;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
 
   button {
-    grid-row-start: 4;
     width: 200px;
     margin: auto;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr 1fr 1fr;
+
+    button {
+      grid-row-start: 4;
+    }
   }
 }
 
 .bigText {
-  grid-row-start: 2;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  min-width: 800px;
-  font-size: 50px;
+  flex-direction: column;
+  font-size: 40px;
 
   h2 {
+    font-size: 50px;
     color: colors.$text-light;
+    margin: 40px 0;
+  }
+
+  @media (min-width: 768px) {
+    grid-row-start: 2;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-width: 800px;
   }
 }
 
 .description {
-  grid-row-start: 3;
-  font-size: 24px;
+  font-size: 22px;
+
+  @media (min-width: 768px) {
+    grid-row-start: 3;
+    font-size: 24px;
+  }
 }
