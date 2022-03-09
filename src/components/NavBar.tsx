@@ -29,7 +29,7 @@ const NavBar = () => {
       >
         <MenuIcon />
       </Button>
-      {isOpen && <MobileMenu />}
+      {isOpen && <MobileMenu onOpenMenu={onOpenMenu} />}
 
       <Button variant="contained" color="primary">
         Log in

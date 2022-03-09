@@ -1,0 +1,16 @@
+@use "../config/colors" as colors;
+
+.container {
+  background-color: colors.$main-background;
+  height: 100vh;
+  padding-top: 70px;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .cardsContainer {
+    grid-column-start: 2;
+  }
+}

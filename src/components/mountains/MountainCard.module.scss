@@ -1,0 +1,9 @@
+@use "../../config/colors" as colors;
+
+.cardContainer {
+  background-color: colors.$light-comp-backgrund;
+  border-radius: 10px;
+  width: 680px;
+  height: 400px;
+  margin: 20px;
+}

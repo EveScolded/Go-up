@@ -1,4 +1,3 @@
-import { PropaneSharp } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
 import classes from "./NavLinks.module.scss";
 
@@ -15,7 +14,7 @@ const NavLinks = (props: NavLinksProps) => {
             className={({ isActive }) =>
               isActive ? `${classes.active}` : `${classes.inactive}`
             }
-            to="/"
+            to="/homepage"
           >
             Home
           </NavLink>

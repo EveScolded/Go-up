@@ -1,13 +1,15 @@
+@use "../config/colors" as colors;
+
 .menuContainer {
   position: absolute;
-  top: 80px;
-  width: 200px;
-  height: 500px;
-  background-color: black;
+  top: 114px;
+  width: 100%;
+  background-color: colors.$main-dark;
 
   .menuMobile {
     display: flex;
     flex-direction: column;
     list-style: none;
+    padding: 0;
   }
 }
