@@ -6,4 +6,34 @@
   width: 680px;
   height: 400px;
   margin: 20px;
+
+  .coverPhoto {
+    width: 660px;
+    height: 350px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .title {
+    position: relative;
+    top: -100px;
+    color: colors.$text-light;
+  }
+  .details {
+    position: relative;
+    bottom: 116px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+
+    &Item {
+      padding-right: 20px;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        padding: 0 5px;
+      }
+    }
+  }
 }

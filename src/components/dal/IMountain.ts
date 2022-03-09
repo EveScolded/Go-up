@@ -5,7 +5,7 @@ export interface Mountain {
   height: number;
   reaching_date: string;
   start_point: string;
-  passing_time: number;
+  duration_time: number;
   route_length: number;
   route_link: string;
   cover_photo: string;
